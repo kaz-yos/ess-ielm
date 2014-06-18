@@ -34,6 +34,20 @@
 ;; in) is sent to ielm, and get executed. This will keep track of what
 ;; has been executed, and should be intuitive for ESS users.
 
+;;; Configuration
+;; To assign eielm-eval-in-ielm to C-RET in specific emacs-lisp modes,
+;; add the following to your configuration.
+;;
+;; For .el files
+;; (define-key emacs-lisp-mode-map (kbd "<C-return>") 'eielm-eval-in-ielm)
+;;
+;; For *scratch*
+;; (define-key lisp-interaction-mode-map (kbd "<C-return>") 'eielm-eval-in-ielm)
+;;
+;; For M-x info
+;; (define-key Info-mode-map (kbd "<C-return>") 'eielm-eval-in-ielm)
+
+
 ;;; Code:
 
 ;;;
@@ -205,14 +219,6 @@ A function definition is detected by a string specified in DEFUN-STRING
    #'eielm-send-to-ielm
    ;; defun-string
    "(defun "))
-;;
-;;; define keys
-;; .el files
-(define-key emacs-lisp-mode-map		(kbd "<C-return>") 'eielm-eval-in-ielm)
-;; *scratch*
-(define-key lisp-interaction-mode-map	(kbd "<C-return>") 'eielm-eval-in-ielm)
-;; M-x info
-(define-key Info-mode-map		(kbd "<C-return>") 'eielm-eval-in-ielm)
 
 
 
