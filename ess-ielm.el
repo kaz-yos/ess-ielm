@@ -1,4 +1,4 @@
-;;; eval-in-repl.el --- Send code to REPL for evaluation  -*- lexical-binding: t; -*-
+;;; ess-ielm.el --- Introduce ESS-like behavior to .el files and ielm  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2014  Kazuki YOSHIDA
 
@@ -471,6 +471,6 @@ This function should not be invoked directly."
 ;;;
 
 
-(provide 'eval-in-repl)
-;;; eval-in-repl.el ends here
+(provide 'ess-ielm)
+;;; ess-ielm.el ends here
 
